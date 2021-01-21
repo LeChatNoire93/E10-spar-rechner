@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="E10_spar_rechner.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="E10-Kostenrechner" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Überschlagsrechnung ab wann es günstiger ist E10 statt E5 Benzin zu tanken" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+        </Label>
+        <Label x:Name="solution1Label" HorizontalTextAlignment="Center" />
+        <Entry x:Name="entry" HorizontalTextAlignment="Center" Placeholder="Bitte E95-Preis eingeben" TextChanged="entry_TextChanged" Completed="entry_Completed"/>
+        <Button x:Name="solveButton" Text="Rechne!" FontSize="Large" IsEnabled="False" VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="Center"
+                Clicked="solveButton_Clicked" />
+        <Frame BackgroundColor="Red" Padding="24" CornerRadius="0">
+            <Label Text="Bevor Sie E10 Tanken, stellen Sie sicher, das Ihr Fahrzeug diesen Kraftstoff verträgt!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Angenommener Mehrverbrauch von 2%, E10 muss daher günstiger sein als 0.98*E5"/>
+    </StackLayout>
+
+</ContentPage>
