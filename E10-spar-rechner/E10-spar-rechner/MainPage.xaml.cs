@@ -18,7 +18,6 @@ namespace E10_spar_rechner
         private void entry_TextChanged(object sender, TextChangedEventArgs e)
         {
             solution1Label.Text = " ";
-
             Entry entry = (Entry)sender;
             double result;
             entry.TextColor = Double.TryParse(entry.Text, out result) ? Color.Default : Color.Red;
@@ -36,7 +35,8 @@ namespace E10_spar_rechner
 
         private void solveButton_Clicked(object sender, EventArgs e)
         {
-
+            rechner();
+            //
         }
 
         private void rechner()
@@ -45,7 +45,7 @@ namespace E10_spar_rechner
             double maxPreisE10;
             //theoretischer Mehrverbrauch von ~2% bei der Verwendung von E10 stattE5
             maxPreisE10 = 0.98 * E95Preis;
-            solution1Label.Text = "Für eine Ersparnis darf E10 nicht mehr als" + maxPreisE10 + " Cent kosten";
+            solution1Label.Text = "Für eine Ersparnis darf E10 nicht mehr als " + maxPreisE10 + " kosten";
         }
     }
 }
